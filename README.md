@@ -13,6 +13,6 @@ HTML | CSS | JavaScript
 
 ##  Como ver
 
-Acesse: https://geovani3344.github.io/versiculos-diarios/
+Acesse: https://geovani3344.github.io/Carta-para-jheovana/
 
 Feito com ❤️
