@@ -13,6 +13,6 @@ HTML | CSS | JavaScript
 ````
 ##  Como ver
 
-Acesse: https://geovani3344.github.io/Carta-para-jheovana/
+Acesse: https://geovani3344.github.io/carta-para-jheovana/
 
 Feito com ❤️
