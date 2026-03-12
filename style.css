@@ -1,5 +1,5 @@
 
-#envelope {
+#envelope {  /* Estilos para o envelope */
   position: relative;
   width: 280px;
   height: 180px;
@@ -12,14 +12,14 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.front {
+.front {  /* Estilos para a parte frontal do envelope */
   position: absolute;
   width: 0;
   height: 0;
   z-index: 3;
 }
 
-.flap {
+.flap {  /* Estilos para a aba do envelope */
   border-left: 140px solid transparent;
   border-right: 140px solid transparent;
   border-bottom: 82px solid transparent;
@@ -28,7 +28,7 @@
   pointer-events: none;
 }
 
-.pocket {
+.pocket {  /* Estilos para o bolso do envelope */
   border-left: 140px solid #f5a3a2; 
   border-right: 140px solid #f5a3a2;
   border-bottom: 90px solid #ff6f61; 
@@ -37,7 +37,7 @@
   border-bottom-right-radius: 6px;
 }
 
-.letter {
+.letter {  /* Estilos para a carta dentro do envelope */
   position: relative;
   background-color: #fff;
   width: 90%;
@@ -50,7 +50,7 @@
   font-family: "Dancing Script", cursive;
 }
 
-.letter:after {
+.letter:after {   /* Estilos para o efeito de sombra da carta */
   content: "";
   position: absolute;
   top: 0;
@@ -59,7 +59,7 @@
   right: 0;
 }
 
-.words {
+.words {   /* Estilos para as palavras dentro da carta */
   position: absolute;
   left: 10%;
   width: 80%;
@@ -67,7 +67,7 @@
   background-color: #ffe6e6; 
 }
 
-.words.line1 {
+.words.line1 { /* Estilos para a primeira linha de palavras dentro da carta */
   top: 10%;
   font-size: 0.5rem;
   width: 20%;
@@ -75,49 +75,49 @@
   font-size: 0.7rem;
 }
 
-.words.line2 {
+.words.line2 { /* Estilos para a segunda linha de palavras dentro da carta */
   top: 32%;
   text-align: center;
   font-size: 0.75rem;
 }
 
-.words.line3 {
+.words.line3 {  /* Estilos para a terceira linha de palavras dentro da carta */
   top: 48%;
   font-size: 0.75rem;
   text-align: center;
 }
 
-.words.line4 {
+.words.line4 {  /* Estilos para a quarta linha de palavras dentro da carta */
   top: 64%;
   font-size: 0.75rem;
   text-align: center;
 }
 
-.open .flap {
+.open .flap {   /* Estilos para a aba do envelope quando a carta está aberta */
   transform: rotateX(180deg);
   transition: transform 0.4s ease, z-index 0.6s;
   z-index: 1;
 }
 
-.close .flap {
+.close .flap {  /* Estilos para a aba do envelope quando a carta está fechada */
   transform: rotateX(0deg);
   transition: transform 0.4s 0.6s ease, z-index 1s;
   z-index: 5;
 }
 
-.close .letter {
+.close .letter {   /* Estilos para a carta quando o envelope está fechado */
   transform: translateY(0px);
   transition: transform 0.4s ease, z-index 1s;
   z-index: 1;
 }
 
-.open .letter {
+.open .letter {   /* Estilos para a carta quando o envelope está aberto */
   transform: translateY(-100px);
   transition: transform 0.4s 0.6s ease, z-index 0.6s;
   z-index: 2;
 }
 
-.hearts {
+.hearts {   /* Estilos para os corações animados */
   position: absolute;
   top: 90px;
   left: 0;
@@ -125,7 +125,7 @@
   z-index: 2;
 }
 
-.heart {
+.heart {   /* Estilos para cada coração individual */
   position: absolute;
   bottom: 0;
   right: 10%;
@@ -133,7 +133,7 @@
 }
 
 .heart:before,
-.heart:after {
+.heart:after {   /* Estilos para criar a forma de coração usando pseudo-elementos */
   position: absolute;
   content: "";
   left: 50px;
@@ -147,19 +147,19 @@
   pointer-events: none;
 }
 
-.heart:after {
+.heart:after {   /* Estilos para a parte direita do coração usando pseudo-elemento after */
   left: 0;
   transform: rotate(45deg);
   transform-origin: 100% 100%;
 }
 
-.close .heart {
+.close .heart {   /* Estilos para os corações quando o envelope está fechado */
   opacity: 0;
   -webkit-animation: none;
   animation: none;
 }
 
-.a1 {
+.a1 {   /* Estilos para o primeiro coração animado */
   left: 20%;
   transform: scale(0.6);
   opacity: 1;
@@ -171,7 +171,7 @@
   animation-delay: 0.7s;
 }
 
-.a2 {
+.a2 {   /* Estilos para o segundo coração animado */
   left: 55%;
   transform: scale(1);
   opacity: 1;
@@ -183,7 +183,7 @@
   animation-delay: 0.7s;
 }
 
-.a3 {
+.a3 {    /* Estilos para o terceiro coração animado */
   left: 10%;
   transform: scale(0.8);
   opacity: 1;
@@ -194,19 +194,19 @@
   -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
-.a4 {
+.a4 {   /* Estilos para o quarto coração animado */
   left: -20%;
   transform: scale(0.6);
   opacity: 1;
   -webkit-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 6 alternate;
-  -moz-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
+  -moz-animation: slideUp 7s linear 1, sideSway 1s ease-in-out 6 alternate;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
 
-@-webkit-keyframes slideUp {
+@-webkit-keyframes slideUp {  /* Definição da animação para os corações subirem */
   0% {
     top: 0;
   }
@@ -214,7 +214,7 @@
     top: -600px;
   }
 }
-@keyframes slideUp {
+@keyframes slideUp {  /* Definição da animação para os corações subirem */
   0% {
     top: 0;
   }
@@ -222,7 +222,7 @@
     top: -600px;
   }
 }
-@-webkit-keyframes sideSway {
+@-webkit-keyframes sideSway { /* Definição da animação para os corações balançarem de um lado para o outro */
   0% {
     margin-left: 0px;
   }
@@ -230,7 +230,7 @@
     margin-left: 50px;
   }
 }
-@keyframes sideSway {
+@keyframes sideSway {  /* Definição da animação para os corações balançarem de um lado para o outro */
   0% {
     margin-left: 0px;
   }
@@ -238,27 +238,28 @@
     margin-left: 50px;
   }
 }
-body {
-  background-color: #f707d345;
+body {  /* Estilos para o corpo da página */
+  background: linear-gradient(135deg, #ff007f 0%, #7a2cbf7f 50%, #770044 100%);
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centraliza verticalmente */
-  align-items: center;     /* Centraliza horizontalmente */
+  justify-content: center; 
+  align-items: center;     
 }
-.envlope-wrapper {
+.envlope-wrapper {  /* Estilos para o contêiner do envelope */
   height: 380px;
 }
 
-.reset {
+.reset {  /* Estilos para a seção de botões de reset */
   text-align: center;
 }
 
-.reset button {
+.reset button {   /* Estilos para os botões de reset */
   font-weight: 800;
   font-style: normal;
   transition: all 0.1s linear;
   -webkit-appearance: none;
-  background-color: transparent;
+  background-color: #f0eef161 ;
   border: solid 2px #d9534f;
   border-radius: 4px;
   color: #d9534f;
@@ -273,33 +274,33 @@ body {
   cursor: pointer;
 }
 
-.reset button:hover {
+.reset button:hover {  /* Estilos para os botões de reset quando o mouse passa por cima */
   background-color: #d9534f;
   color: #fff;
 }
 
 /* Mobile responsivo */
 @media (max-width: 768px) {
-  #envelope {
+  #envelope { /* Ajustes para o envelope em telas menores */
     width: 380px;
     height: 240px;
     top: 60px;
   }
 
-  .flap {
+  .flap { /* Ajustes para a aba do envelope em telas menores */
     border-left: 190px solid transparent;
     border-right: 190px solid transparent;
     border-bottom: 109px solid transparent;
     border-top: 131px solid #d9534f;
   }
 
-  .pocket {
+  .pocket { /* Ajustes para o bolso do envelope em telas menores */
     border-left: 190px solid #f5a3a2;
     border-right: 190px solid #f5a3a2;
     border-bottom: 120px solid #ff6f61;
     border-top: 120px solid transparent;
   }
-
+ /* Ajustes para a carta dentro do envelope em telas menores */
   .words.line2 {
     font-size: 1rem;
   }
@@ -312,14 +313,14 @@ body {
     font-size: 1rem;
   }
 
-  .envlope-wrapper {
+  .envlope-wrapper {  /* Ajustes para o contêiner do envelope em telas menores */
     height: 480px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .open .letter {
+  .open .letter {  /* Ajustes para a carta quando o envelope está aberto em telas menores */
     transform: translateY(-130px);
   }
 }
